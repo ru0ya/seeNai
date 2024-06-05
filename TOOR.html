@@ -1,0 +1,415 @@
+<! DOCTYPE html >
+
+<html>
+
+<head> 
+  <title>TOOR</title>
+	<link href="style.css" rel="stylesheet">
+	<link href="TOOR.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="navbar">
+   <div class="logo"><a href="#"><img src="CANDIT-logos-more.jpeg" alt="logo" style="height:60px; width: 80px; margin-top: -20px;" ></a>
+     </div>
+   <div id="navbar-right">
+  <a class="active" href="file:///C:/Users/_CAN.DY_/Documents/CAND.IT/CAND.IT.html">Home</a>
+  <a href="#news">News</a>
+  <a href="file:///C:/Users/_CAN.DY_/Documents/CAND.IT/CAND.IT.contactform.html">FIND</a>
+   </div>
+  <script>
+ // When the user scrolls down 20px from the top of the document, slide down the navbar
+// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+</script>
+</div>
+
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1> ENKARE NAIROBI</h1>
+    <p>WHERE ADVENTURE COMES TO LIFE </p> 
+
+
+  </div>
+</div>
+
+<!-- Load font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- The social media icon bar -->
+<div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+</div>
+
+<div class="container">
+     <ul class="myUL">
+    <li><b> NDIO KUDONJO</b></li>
+  </ul>
+   </div>
+   
+<div class="responsive">
+  <div class="gallery">
+    <a href="code.jpg">
+      <img src="tall-buildings.jpg" alt="Codes">
+    </a>
+    <div class="desc"> With outstanding architecture </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="x504.webp">
+      <img src="images-nganya.jpg" alt="a website">
+    </a>
+    <div class="desc">WE TRAVEL IN STYLE </b></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="types-of-websites.jpg">
+      <img src="images DANCING.jpg" alt="businesses">
+    </a>
+    <div class="desc"> We are filled with culture.</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="0x0.webp">
+      <img src="smocha.jpg" alt="building">
+    </a>
+    <div class="desc">A land of smocha and soda </div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+ 
+ <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides">
+    <q> KARIBU KENYA </q>
+    <p class="autho">President. WILLIAM RUTO</p>
+  </div>
+
+  <div class="mySlides">
+    <q>I Love my Home Nairobi</q>
+    <p class="author">HON.SAKAJA JOHNSON</p>
+  </div>
+
+  <div class="mySlides">
+    <q> Huku tuna donjo, kudunda yaani kufinish kumaloo!</q>
+    <p class="author"> mejja</p>
+  </div>
+
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+  
+<div class="row">
+  <div class="column" style="background-color:#F0EAD6;">
+    <h2 style="text-align:center;">KARIBU NAIROBI</h2>
+    <p style="text-align:center;" >Nairobi has numerous recreational green areas. <br>
+	The largest is the Nairobi National Park, located in the Southern side of the city.<br>
+	Other recreational arears and protected forests include Uhuru Park, Central Park,<br>
+	John Michuki Park, Nairobi Arboretum, City Park, Uhuru Gardens, Jeevanjee Gardens, <br>
+	Karura Forest, Ngong forest, and Ololua forest.
+</p>
+  </div>
+  <div class="column" style="background-color:#FFFAF0;">
+    <h2 style="text-align:center;">NAIROBI</h2>
+    <p style="text-align:center;"> Nairobi is home to most of Kenya's news and media organisations. <br>
+	The city is also home to the region's largest newspapers: the Daily Nation and The Standard.<br>
+	These are circulated within Kenya and cover a range of domestic and regional issues. Both newspapers are published in English.<br>
+	People Daily is also the leading free newspaper distributed on the streets of Nairobi. It is published by Mediamax Limited.</p>
+  </div>
+</div>
+
+<div class="foot">
+    <h2 style="text-align:center;"> Kwani? ni kesho</h2>
+	
+</div>
+
+<body>
+<!-- Container for the image gallery -->
+<div class="container123">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides5">
+    <div class="numbertext">1 / 6</div>
+      <img src="maasai.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides5">
+    <div class="numbertext">2 / 6</div>
+      <img src="rugby.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides5">
+    <div class="numbertext">3 / 6</div>
+      <img src="lio0ns in nairobi.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides5">
+    <div class="numbertext">4 / 6</div>
+      <img src="marke-maasai.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides5">
+    <div class="numbertext">5 / 6</div>
+      <img src="Two-Rivers-Mall-Nairobi-Fun-Activities.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides5">
+    <div class="numbertext">6 / 6</div>
+      <img src="download-two-rivers.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container7">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row45">
+    <div class="column6">
+      <img class="demo cursor" src="maasai.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column6">
+      <img class="demo cursor" src="rugby.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column6">
+      <img class="demo cursor" src="lio0ns in nairobi.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column6">
+      <img class="demo cursor" src="marke-maasai.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column6">
+      <img class="demo cursor" src="Two-Rivers-Mall-Nairobi-Fun-Activities.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>
+    <div class="column6">
+      <img class="demo cursor" src="download-two-rivers.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides5");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+
+    <body>
+    
+        <section id="services">
+            <h2 class="heading"> come visit.... </h2>
+            <p> Get to experience and enjoy our our sceneries. </p>
+            <!-- Services Main Container Starts from Here -->
+            <div class="services-container">
+                <!-- Service Item starts from here -->
+                <div class="service-item">
+                    <ul>
+                        <li><i class="fa-solid fa-desktop"></i></li>
+                    </ul>
+                    <article>
+                        <h2 class="service-heading"> LANDSCAPES </h2>
+                        <p>An eye catching, quality Views and captivating sites sculptured just for you!</p>
+                    </article>
+                </div>
+                <!-- Service Item Ends here -->
+    
+                <!-- Service Item starts from here -->
+                <div class="service-item">
+                    <ul>
+                        <li><i class="fa-solid fa-chart-line"></i></li>
+                    </ul>
+                    <article>
+                        <h2 class="service-heading"> MATATU CULTURE </h2>
+                        <p>Safari na sisi, get to travel with most captivating and amazing nganyas and enjoy every ride.</p>
+                    </article>
+                </div>
+                <!-- Service Item Ends here -->
+    
+                <!-- Service Item starts from here -->
+                <div class="service-item">
+                    <ul>
+                        <li><i class="fa-brands fa-telegram"></i></li>
+                    </ul>
+                    <article>
+                        <h2 class="service-heading"> STREET FOODS </h2>
+                        <p>we all love Eating! Nairobi gives you tha best food recepies and great dishes. "njoo tulee"</p>
+                    </article>
+                </div>
+                <!-- Service Item Ends here -->
+    
+                <!-- Service Item starts from here -->
+                <div class="service-item">
+                    <ul>
+                        <li><i class="fa-solid fa-building-columns"></i></li>
+                    </ul>
+                    <article>
+                        <h2 class="service-heading"> NIGHT LIFE </h2>
+                        <p>Get to dive into the night and explore amazing hotels and great events!</p>
+                    </article>
+                </div>
+                <!-- Service Item Ends here -->
+    
+                <!-- Service Item starts from here -->
+                <div class="service-item">
+                    <ul>
+                        <li><i class="fa-sharp fa-solid fa-credit-card"></i></li>
+                    </ul>
+                    <article>
+                        <h2 class="service-heading"> SOCIAL MEDIA </h2>
+                        <p>we on all platforms and we run every platform, get to witness and enjoy our social media activities!</p>
+                    </article>
+                </div>
+                <!-- Service Item Ends here -->
+    
+                <!-- Service Item starts from here -->
+                <div class="service-item">
+                    <ul>
+                        <li><i class="fa-solid fa-bag-shopping"></i></li>
+                    </ul>
+                    <article>
+                        <h2 class="service-heading"> SKY SCRAPERS  </h2>
+                        <p>with tall and amaizing sculptures as scrapers Nairobi is a city with great Views!</p>
+                    </article>
+                </div>
+                <!-- Service Item Ends here -->
+				
+				 <!-- Service Item starts from here -->
+                <div class="service-item">
+                    <ul>
+                        <li><i class="fa-solid fa-bag-shopping"></i></li>
+                    </ul>
+                    <article>
+                        <h2 class="service-heading"> EVENTS  </h2>
+                        <p>from shows to tours, get to experience mind blowing events.!</p>
+                    </article>
+                </div>
+                <!-- Service Item Ends here -->
+        </section>
+    </body>
+    
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+	
+<div class="hero-image2">
+  <div class="hero-text2">
+    <h1>Dive into Nairobi.</h1>
+     <a href="coolMap.html"> <button style="background-color: #00B7EB; border-radius:8px; height: 25px; width: 90px; font-size:10px; font-family:'Skranji', cursive;"> EXPLORE NOW </button> </a>
+  </div>
+</div>
+</body>
+	
+	
+	
+	<body>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>TOURISM</h3>
+                       </div> 
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        </div>
+                    <div class="col-md-6 item text">
+                        <h3>NAIROBI KENYA</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">copyright 2024 © CAND.IT</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>

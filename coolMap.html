@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map of Nairobi County</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- Include the Leaflet JS file before any custom scripts -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map and set its view to Nairobi County
+        var map = L.map('map').setView([-1.286389, 36.817223], 12);
+
+        // Load and display tile layers on the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Custom icons
+        var customIcon = L.icon({
+            iconUrl: 'https://th.bing.com/th/id/R.02299e3fc0565024f794eda18314fdb3?rik=8ffjEpROX%2ffljg&pid=ImgRaw&r=0', // Replace with the URL to your custom icon
+            iconSize: [25, 25],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var airplaneIcon = L.icon({
+            iconUrl: 'https://th.bing.com/th/id/OIP.dCtrjURqGw-ePcsGzeEvhgHaHa?rs=1&pid=ImgDetMain', // Replace with the URL to your airplane icon
+            iconSize: [25, 25],
+            iconAnchor: [9, 9],
+            popupAnchor: [0, -10]
+        });
+
+        var natureTrailIcon = L.icon({
+            iconUrl: 'https://th.bing.com/th/id/OIP.9Mld61B0rc5vls6FC6-pWwHaH_?rs=1&pid=ImgDetMain', // Replace with the URL to your nature trail icon
+            iconSize: [25, 25],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var indoorGamingIcon = L.icon({
+            iconUrl: 'https://th.bing.com/th/id/R.08aa4708cbe1b01974e868d8fd66266a?rik=XvTxJAbAFCZFKg&riu=http%3a%2f%2fclipart-library.com%2fimg%2f1983436.jpg&ehk=MKSaiez6Q61XHoTocDXbMfNmTKQssolDL2MNjjq3o3c%3d&risl=&pid=ImgRaw&r=0', // Replace with the URL to your indoor gaming icon
+            iconSize: [25, 25],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var drumsIcon = L.icon({
+            iconUrl: 'https://th.bing.com/th/id/OIP.Asz1Y9gijLkvr1UXQzFrogHaE7?rs=1&pid=ImgDetMain', // Replace with the URL to your drums icon
+            iconSize: [25, 25],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var swimmingIcon = L.icon({
+            iconUrl: 'https://www.pngkey.com/png/detail/85-850908_blue-swimmer-icon-swim-icon.png', // Replace with the URL to your swimming icon
+            iconSize: [25, 25],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var coffeeCupIcon = L.icon({
+            iconUrl: 'https://th.bing.com/th/id/OIP.UO_9LPH2hJAJtE4QiMphPQHaHa?rs=1&pid=ImgDetMain', // Replace with the URL to your coffee cup icon
+            iconSize: [25, 25],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var golfIcon = L.icon({
+            iconUrl: 'https://th.bing.com/th/id/OIP.g5-vnTQdr67hxy8Xtn_zGQHaIA?rs=1&pid=ImgDetMain', // Replace with the URL to your golf icon
+            iconSize: [25, 25],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var eastlandsIcon = L.icon({
+            iconUrl: 'https://4.bp.blogspot.com/-WZiFIvoG3aM/TzHNo8JlXiI/AAAAAAAAAOI/oFmuJVyZT6k/s1600/calif.jpg', // Replace with the URL to your Eastlands icon
+            iconSize: [25, 25],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        // Add markers with custom icons, hyperlinks, and hover popups
+        var markers = [
+            {coords: [-1.286389, 36.817223], icon: customIcon, popup: '<b>Nairobi County</b><br>Capital of Kenya.', url: 'https://nairobi.go.ke/'},
+            {coords: [-1.321111, 36.814722], icon: airplaneIcon, popup: 'You can go plane spotting here', url: 'https://www.kaa.go.ke/wilson-airport/?v=518f4a738816'},
+            {coords: [-1.279167, 36.863333], icon: airplaneIcon, popup: 'You can go plane spotting here', url: 'https://example.com/moi-airbase-info'},
+            {coords: [-1.239985, 36.830696], icon: natureTrailIcon, popup: 'Take a nature walk at Karura', url: 'https://www.tripadvisor.com/Attraction_Review-g294207-d2707373-Reviews-Karura_Forest-Nairobi.html'},
+            {coords: [-1.320302, 36.753084], icon: natureTrailIcon, popup: 'Take a nature walk Ngong Rd Forest Sanctuary', url: 'https://www.ngongroadforest.com/'},
+            {coords: [-1.359316, 36.703161], icon: natureTrailIcon, popup: 'Take a nature walk at OlooLua In Karen', url: 'https://www.tuko.co.ke/262257-oloolua-nature-trail-prices-activities-and-contacts.html'},
+            {coords: [-1.167674, 37.073458], icon: natureTrailIcon, popup: 'Take a nature walk at Juja Farm', url: 'https://nulands.co.ke/lord-mcmillan-history-juja-farm/'},
+            {coords: [-1.298343, 36.762542], icon: indoorGamingIcon, popup: 'Enjoy indoor gaming at Junction Mall', url: 'https://www.tripadvisor.com/Attraction_Review-g294207-d3710424-Reviews-The_Junction_Mall-Nairobi.html'},
+            {coords: [-1.320006, 36.703992], icon: indoorGamingIcon, popup: 'Enjoy indoor gaming at The Hub Karen', url: 'https://thehubkaren.com'},
+            // Drums icon
+            {coords: [-1.274702, 36.814477], icon: drumsIcon, popup: 'Experience Local Kenyan Culture at Nairobi Museum', url: 'https://museums.or.ke/nairobi-national-museum/'},
+            {coords: [-1.33991, 36.765232], icon: drumsIcon, popup: 'Experience Local Kenyan Culture at Bomas of Kenya', url: 'https://bomasofkenya.go.ke/'},
+            {coords: [-1.330128, 36.701145], icon: drumsIcon, popup: 'Experience Local Kenyan Culture at Karen Blixen museum', url: 'https://museums.or.ke/karen-blixen/'},
+            // Swimming icon
+            {coords: [-1.320055, 36.702787], icon: swimmingIcon, popup: 'Wanna go Swimming, Paddleboarding and Sailing at The Hub Karen Lake', url: 'https://thehubkaren.com'},
+            {coords: [-1.328732, 36.715236], icon: swimmingIcon, popup: 'Wanna go Swimming, Paddleboarding and Sailing at Waterfront Mall', url: 'majimagic.com'},
+            {coords: [-1.318686, 36.802883], icon: swimmingIcon, popup: 'Wanna go Swimming, Paddleboarding and Sailing at the Nairobi Dam', url: 'https://en.wikipedia.org/wiki/Nairobi_Dam'},
+            // Coffee cup icon
+            {coords: [-1.355107, 36.714238], icon: coffeeCupIcon, popup: 'Sample Local Homegrown coffee at Karen Blixen Garden', url: 'https://www.karenblixencoffeegardens.com/'},
+            {coords: [-1.193709, 36.821036], icon: coffeeCupIcon, popup: 'Sample Local Homegrown coffee at Paradise Lost Farm', url: 'https://www.tripadvisor.com/Attraction_Review-g294207-d4346624-Reviews-Paradise_Lost-Nairobi.html'},
+            // Golf icon
+            {coords: [-1.34556, 36.717045], icon: golfIcon, popup: 'Taking a swing at Golf at Karen Country Club?', url: 'https://www.karencountryclub.org/Golf/'},
+            {coords: [-1.296392, 36.820271], icon: golfIcon, popup: 'Taking a swing at Kenya Railway Golf Club?', url: 'https://krgc.co.ke/'},
+            {coords: [-1.258277, 36.838717], icon: golfIcon, popup: 'Taking a swing at Muthaiga Golf and Country Club?', url: 'https://www.muthaigagolfclub.com/'},
+            {coords: [-1.179606, 36.954804], icon: golfIcon, popup: 'Taking a swing at Ruiru Sports Club?', url: 'ruirusportsclub.co.ke'},
+            // Eastlands icon
+            {coords: [-1.288503, 36.871281], icon: eastlandsIcon, popup: 'Visit Jericho Art Center Showcase', url: 'https://www.wisetwo.org/about'},
+            {coords: [-1.280334, 36.872522], icon: eastlandsIcon, popup: 'Grab a burger at BuruBuru', url: 'https://www.ubereats.com/ke/store/steers-buruburu/A4RapnsxS-akuUlzi2cfjQ'},
+            {coords: [-1.27905, 36.847439], icon: eastlandsIcon, popup: 'Visit the Largest Mall in East and Central Africa', url: 'https://www.bbsmallnairobi.com/'},
+            {coords: [-1.276822, 36.826955], icon: eastlandsIcon, popup: 'Visit Ngara Sarakasi Centre', url: 'https://sarakasi.org/sarakasidome/'}
+        ];
+
+        markers.forEach(function(marker) {
+            var m = L.marker(marker.coords, { icon: marker.icon })
+                .addTo(map)
+                .bindPopup(marker.popup)
+                .on('click', function() {
+                    window.location.href = marker.url;
+                });
+
+            m.on('mouseover', function() {
+                m.openPopup();
+            });
+
+            m.on('mouseout', function() {
+                m.closePopup();
+            });
+        });
+
+        // Handle map click event
+        map.on('click', function(e) {
+            alert("You clicked the map at " + e.latlng);
+        });
+    </script>
+</body>
+</html>
